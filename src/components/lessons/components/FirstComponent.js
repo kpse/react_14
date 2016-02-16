@@ -12,7 +12,7 @@ class FirstComponent extends React.Component {
     return (
       <div className="first-component">
         <h1>This is the comment box.</h1>
-        <List />
+        <List data={this.props.data} />
         <Form />
       </div>
 
