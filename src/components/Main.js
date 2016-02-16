@@ -6,8 +6,7 @@ import CommentBox from './lessons/components/FirstComponent';
 
 let yeomanImage = require('../images/yeoman.png');
 
-class AppComponent extends React.Component {
-  render() {
+let AppComponent = (props) => {
     let data = [
       {id: 1, author: "Pete Hunt", text: "This is one comment"},
       {id: 2, author: "Jordan Walke", text: "This is *another* comment"}
@@ -19,10 +18,8 @@ class AppComponent extends React.Component {
         <CommentBox data={data} />
       </div>
     );
-  }
-}
+  };
 
-AppComponent.defaultProps = {
-};
+AppComponent.displayName = 'Main';
 
 export default AppComponent;
