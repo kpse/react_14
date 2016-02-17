@@ -4,11 +4,15 @@ import React from 'react';
 
 require('styles/lessons/components/CommentForm.less');
 
-let CommentFormComponent = (props) => (
-  <div className="commentform-component">
-    This is comment form.
-  </div>
-);
+class CommentFormComponent extends React.Component {
+  render() {
+    return (<form className="comment-form">
+      <input type="text" placeholder="your name"/>
+      <input type="text" placeholder="say something"/>
+      <input type="submit" value="Post"/>
+    </form>)
+  }
+}
 
 CommentFormComponent.displayName = 'LessonsComponentsCommentFormComponent';
 
